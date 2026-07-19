@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#221337" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <div class="floating-shapes" aria-hidden="true"></div>
+
+  <section id="welcomeScreen" class="welcome-screen">
+    <div class="welcome-card glass">
+      <div class="gift-icon" aria-hidden="true">🎁</div>
+      <p class="eyebrow">A little surprise is waiting for</p>
+      <h1 id="welcomeName">Someone Special</h1>
+      <p class="welcome-note">Made with memories, smiles, and lots of love.</p>
+      <button id="openButton" class="primary-button">Open Your Surprise ✨</button>
+      <p class="tiny-note">Tap once to start the music</p>
+    </div>
+  </section>
+
+  <main id="mainContent" class="main-content hidden">
+    <nav class="topbar glass">
+      <div class="brand">🎂 Birthday Magic</div>
+      <button id="musicButton" class="icon-button" aria-label="Play or pause music">♫ Music</button>
+    </nav>
+
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Today is all about you</p>
+        <h1>Happy Birthday, <span id="heroName">Bestie</span>! 🎉</h1>
+        <p id="heroSubtitle" class="hero-subtitle">
+          May your day be as wonderful and unforgettable as you are.
+        </p>
+        <div class="hero-actions">
+          <a href="#memories" class="primary-button">See Our Memories</a>
+          <button id="celebrateButton" class="secondary-button">Celebrate Again 🎊</button>
+        </div>
+      </div>
+
+      <div class="cake-card glass">
+        <div class="cake">
+          <div class="flame"></div>
+          <div class="candle"></div>
+          <div class="icing"></div>
+          <div class="cake-body">
+            <span>HAPPY</span>
+            <span>BIRTHDAY</span>
+          </div>
+          <div class="plate"></div>
+        </div>
+        <p>Make a wish! ✨</p>
+      </div>
+    </section>
+
+    <section id="memories" class="section memories-section">
+      <div class="section-heading">
+        <p class="eyebrow">Our favourite moments</p>
+        <h2>A Gallery Full of Memories 📸</h2>
+        <p>Every picture carries a story worth smiling about.</p>
+      </div>
+
+      <div class="slideshow glass">
+        <button id="prevSlide" class="slide-control left" aria-label="Previous photo">‹</button>
+        <div id="slidesContainer" class="slides-container"></div>
+        <button id="nextSlide" class="slide-control right" aria-label="Next photo">›</button>
+        <div id="slideDots" class="slide-dots"></div>
+      </div>
+    </section>
+
+    <section class="section message-section">
+      <div class="message-card glass">
+        <div class="letter-top">
+          <span>💌</span>
+          <div>
+            <p class="eyebrow">A message from the heart</p>
+            <h2>For <span id="messageName">You</span></h2>
+          </div>
+        </div>
+        <p id="personalMessage" class="personal-message"></p>
+        <p id="signature" class="signature">— From someone who cares</p>
+      </div>
+    </section>
+
+    <section class="section wishes-section">
+      <div class="section-heading">
+        <p class="eyebrow">Birthday blessings</p>
+        <h2>What I Wish for You 🌟</h2>
+      </div>
+      <div id="wishCards" class="wish-grid"></div>
+    </section>
+
+    <section class="section finale-section">
+      <div class="finale-card glass">
+        <p class="big-emoji">🥳</p>
+        <h2>One more time...</h2>
+        <h3>Happy Birthday, <span id="finalName">Bestie</span>!</h3>
+        <p id="finalMessage">Keep smiling, keep shining, and keep being amazing.</p>
+        <button id="finalConfettiButton" class="primary-button">Shower the Screen with Confetti 🎉</button>
+      </div>
+    </section>
+
+    <footer>
+      <p id="footerText">Made with ❤️ especially for you.</p>
+    </footer>
+  </main>
+
+  <audio id="backgroundMusic" loop preload="auto"></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
